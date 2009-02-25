@@ -1,0 +1,58 @@
+# Avoid version control files.
+\bRCS\b
+\bCVS\b
+\bSCCS\b
+,v$
+\B\.svn\b
+\b_darcs\b
+\B\.git\b
+\.cvsignore$
+
+# Avoid Makemaker generated and utility files.
+\bMANIFEST\.bak
+\bMakefile$
+\bblib/
+\bMakeMaker-\d
+\bpm_to_blib\.ts$
+\bpm_to_blib$
+\bblibdirs\.ts$
+\bblib
+\bblibdirs$
+^MANIFEST.SKIP$
+\.shipit
+
+# Avoid Module::Build generated and utility files.
+\bBuild$
+\b_build/
+\bBuild\.bat$
+\b_build
+
+# Avoid temp and backup files.
+~$
+\.old$
+\#$
+\b\.#
+\.bak$
+\.sw.$
+\b\.DS_Store$
+\.tmp$
+\.DS_Store$
+
+# Avoid Devel::Cover files.
+\bcover_db\b
+
+# Don't include utility configuration files
+\B\.shipit$
+\B\.prove$
+\B\.gitignore$
+
+# Don't include the MANIFEST.SKIP file itself
+^MANIFEST\.SKIP$
+
+# it might contain sensitive environmental information
+examples/ExampleDB-.*-dump.txt
+
+# Some random author-only stuff that shouldn't be packaged
+test-schemas
+.project.yml
+

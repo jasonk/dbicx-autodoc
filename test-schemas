@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#SRCDIR=$HOME/devlibs/DBIx-Class/0.09/trunk/t/examples/Schema
+#
+#cd ~/devlibs/DBIx-Class/0.09/trunk/t/examples/Schema
+#~/devlibs/DBIx-Class/0.09/trunk/t/examples/Schema MyDatabase::Main
+
+cd ~/devlibs/DBIx-Class/0.09/trunk
+for I in Plain ResultSetManager Schema; do
+    CLASS="DBICTest::$I"
+    echo "Documenting $CLASS"
+    ~/projects/DBICx-AutoDoc/dbicx-autodoc -It/lib --schema=$CLASS
+done;

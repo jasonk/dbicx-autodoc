@@ -1,0 +1,6 @@
+[% FOR var IN varlist.sort %]
+##### [% var %] #####
+[% dumper( $var ) %]
+
+[% END %]
+[%# $Id: AUTODOC-dump.txt 13 2007-11-20 13:42:42Z jason $ #%]

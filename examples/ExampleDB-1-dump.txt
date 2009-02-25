@@ -1,0 +1,519 @@
+
+##### connect #####
+0
+
+
+##### dsn #####
+""
+
+
+##### ENV #####
+{
+  "Apple_PubSub_Socket_Render" => "/tmp/launch-eRAIWN/Render",
+  CDPATH                       => ".:..:../..:~:~/projects:~/projects/egenera:~/projects/egenera/Portal",
+  CLICOLOR                     => 1,
+  COMMAND_MODE                 => "unix2003",
+  CVS_RSH                      => "ssh",
+  DISPLAY                      => "/tmp/launch-S77h8c/:0",
+  EC2_CERT                     => "/Users/jason/.ec2/cert-CEZTAWINCNGT3JLZDOHUW7PVS3RWNKHL.pem",
+  EC2_HOME                     => "/Users/jason/.ec2/tools",
+  EC2_PRIVATE_KEY              => "/Users/jason/.ec2/pk-CEZTAWINCNGT3JLZDOHUW7PVS3RWNKHL.pem",
+  EDITOR                       => "vim",
+  FIGNORE                      => ".o:.swp:.svn",
+  HISTSIZE                     => 1000,
+  HOME                         => "/Users/jason",
+  HOSTNAME                     => "critter.local",
+  INFOPATH                     => "/sw/share/info:/sw/info:/usr/share/info",
+  LANG                         => "C",
+  LESS                         => "isR",
+  LOGNAME                      => "jason",
+  LSCOLORS                     => "Cxfxcxdxbxegedabagacad",
+  LS_COLORS                    => "no=00:fi=00:di=01;32:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;32:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:*.sh=01;32:*.csh=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tz=01;31:*.rpm=01;31:*.cpio=01;31:*.jpg=01;35:*.gif=01;35:*.bmp=01;35:*.xbm=01;35:*.xpm=01;35:*.png=01;35:*.tif=01;35:",
+  MANPATH                      => "/sw/share/man::/usr/local/man:/sw/lib/perl5/5.8.8/man:/usr/X11R6/man:/usr/local/man:/usr/local/man",
+  PAGER                        => "less",
+  PATH                         => "/usr/local/bin:/opt/perl/bin:/opt/perl/bin:/usr/local/mysql/bin:/Users/jason/bin:/opt/local/bin:/usr/local/bin:/opt/perl/bin:/opt/perl/bin:/usr/local/mysql/bin:/Users/jason/bin:/opt/local/bin:/sw/bin:/sw/sbin:/usr/local/bin:/opt/perl/bin:/opt/perl/bin:/usr/local/mysql/bin:/Users/jason/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/local/bin:/usr/sbin:/Users/jason/.ec2/tools/bin:/usr/sbin/sbin/usr/local/sbin:/usr/local/sbin:/opt/local/bin:/Library/PostgreSQL8/bin:/Applications/XMLEditor.app/Contents/Resources/Java:/Users/jason/bin:/usr/X11R6/bin:/Users/jason/.ec2/tools/bin:/usr/sbin/sbin/usr/local/sbin:/usr/local/sbin:/opt/local/bin:/Library/PostgreSQL8/bin:/Applications/XMLEditor.app/Contents/Resources/Java:/Users/jason/.ec2/tools/bin:/usr/sbin/sbin/usr/local/sbin:/usr/local/sbin:/opt/local/bin:/Library/PostgreSQL8/bin:/Applications/XMLEditor.app/Contents/Resources/Java",
+  PERL5LIB                     => "/Users/jason/lib:/Users/jason/projects/egenera/Portal/lib:/Users/jason/projects/egenera/Portal/lib:/Users/jason/projects/egenera/Portal/Portal-Agent/lib:/Users/jason/projects/egenera/Portal/Portal-DB/lib:/Users/jason/projects/egenera/Portal/Portal-Log/lib:/Users/jason/projects/egenera/Portal/Portal-Test/lib:/Users/jason/projects/egenera/Portal/Portal-Tool/lib:/Users/jason/projects/egenera/Portal/Portal-Util/lib:/Users/jason/projects/egenera/Portal/Portal-Web/lib:/Users/jason/projects/egenera/Portal/Portal-Worker/lib:",
+  PGDATA                       => "/data/postgresql",
+  POSTGRES_INCLUDE             => "/usr/include/pgsql",
+  POSTGRES_LIB                 => "/usr/lib",
+  PROMPT_COMMAND               => "set_prompt",
+  PWD                          => "/Users/jason/projects/DBICx-AutoDoc",
+  RSYNC_RSH                    => "ssh",
+  SECURITYSESSIONID            => "b350d0",
+  SHELL                        => "/bin/bash",
+  SHLVL                        => 2,
+  SSH_AUTH_SOCK                => "/tmp/501/SSHKeychain.socket",
+  SVN_SSH                      => "ssh -l jason",
+  TERM                         => "xterm-color",
+  TERM_PROGRAM                 => "Apple_Terminal",
+  TERM_PROGRAM_VERSION         => 237,
+  TMPDIR                       => "/var/folders/21/21Ew4o6hGxqT4wVWzVxWTE+++TI/-Tmp-/",
+  TZ                           => "EST5EDT",
+  USER                         => "jason",
+  _                            => "./dbicx-autodoc",
+  "__CF_USER_TEXT_ENCODING"    => "0x1F5:0:0",
+}
+
+
+##### filename_base #####
+"ExampleDB-1"
+
+
+##### generated #####
+"Wed Nov 21 10:14:48 2007"
+
+
+##### graphviz_command #####
+["fdp"]
+
+
+##### inheritance #####
+{
+  "Class::Accessor::Grouped"                  => [],
+  "Class::C3::Componentised"                  => [],
+  "DBICx::AutoDoc::Magic"                     => ["DBIx::Class"],
+  "DBIx::Class"                               => ["DBIx::Class::Componentised", "Class::Accessor::Grouped"],
+  "DBIx::Class::Componentised"                => ["Class::C3::Componentised"],
+  "DBIx::Class::Core"                         => [
+                                                   "DBIx::Class::Relationship",
+                                                   "DBIx::Class::InflateColumn",
+                                                   "DBIx::Class::PK::Auto",
+                                                   "DBIx::Class::PK",
+                                                   "DBIx::Class::Row",
+                                                   "DBIx::Class::ResultSourceProxy::Table",
+                                                   "DBIx::Class",
+                                                 ],
+  "DBIx::Class::InflateColumn"                => ["DBIx::Class::Row"],
+  "DBIx::Class::InflateColumn::DateTime"      => ["DBIx::Class::InflateColumn", "DBIx::Class"],
+  "DBIx::Class::PK"                           => ["DBIx::Class::Row"],
+  "DBIx::Class::PK::Auto"                     => ["DBIx::Class"],
+  "DBIx::Class::Relationship"                 => [
+                                                   "DBIx::Class::Relationship::Helpers",
+                                                   "DBIx::Class::Relationship::Accessor",
+                                                   "DBIx::Class::Relationship::CascadeActions",
+                                                   "DBIx::Class::Relationship::ProxyMethods",
+                                                   "DBIx::Class::Relationship::Base",
+                                                   "DBIx::Class",
+                                                 ],
+  "DBIx::Class::Relationship::Accessor"       => [],
+  "DBIx::Class::Relationship::Base"           => ["DBIx::Class"],
+  "DBIx::Class::Relationship::BelongsTo"      => [],
+  "DBIx::Class::Relationship::CascadeActions" => [],
+  "DBIx::Class::Relationship::HasMany"        => [],
+  "DBIx::Class::Relationship::HasOne"         => [],
+  "DBIx::Class::Relationship::Helpers"        => [
+                                                   "DBICx::AutoDoc::Magic",
+                                                   "DBIx::Class::Relationship::HasMany",
+                                                   "DBIx::Class::Relationship::HasOne",
+                                                   "DBIx::Class::Relationship::BelongsTo",
+                                                   "DBIx::Class::Relationship::ManyToMany",
+                                                   "DBIx::Class",
+                                                 ],
+  "DBIx::Class::Relationship::ManyToMany"     => [],
+  "DBIx::Class::Relationship::ProxyMethods"   => ["DBIx::Class"],
+  "DBIx::Class::ResultSourceProxy"            => ["DBIx::Class"],
+  "DBIx::Class::ResultSourceProxy::Table"     => ["DBIx::Class::ResultSourceProxy"],
+  "DBIx::Class::Row"                          => ["DBIx::Class"],
+  "ExampleDB::Result::Address"                => ["DBIx::Class::Core", "DBIx::Class"],
+  "ExampleDB::Result::EmailAddress"           => ["DBIx::Class::Core", "DBIx::Class"],
+  "ExampleDB::Result::Person"                 => [
+                                                   "DBIx::Class::InflateColumn::DateTime",
+                                                   "DBIx::Class::Core",
+                                                   "DBIx::Class",
+                                                 ],
+  "ExampleDB::Result::PhoneNumber"            => ["DBIx::Class::Core", "DBIx::Class"],
+}
+
+
+##### output #####
+"examples"
+
+
+##### relationship_map #####
+[
+  {
+    accessor => undef,
+    cond     => [{ foreign => "id", self => "person_id" }],
+    foreign  => "Person",
+    name     => "person",
+    self     => "Address",
+    type     => "belongs_to",
+  },
+  {
+    accessor => undef,
+    cond     => [{ foreign => "id", self => "person_id" }],
+    foreign  => "Person",
+    name     => "person",
+    self     => "EmailAddress",
+    type     => "belongs_to",
+  },
+  {
+    accessor => undef,
+    cond     => [{ foreign => "person_id", self => "id" }],
+    foreign  => "Address",
+    name     => "addresses",
+    self     => "Person",
+    type     => "has_many",
+  },
+  {
+    accessor => undef,
+    cond     => [{ foreign => "person_id", self => "id" }],
+    foreign  => "EmailAddress",
+    name     => "emails",
+    self     => "Person",
+    type     => "has_many",
+  },
+  {
+    accessor => undef,
+    cond     => [{ foreign => "person_id", self => "id" }],
+    foreign  => "PhoneNumber",
+    name     => "phone_numbers",
+    self     => "Person",
+    type     => "has_many",
+  },
+  {
+    accessor => undef,
+    cond     => [{ foreign => "id", self => "person_id" }],
+    foreign  => "Person",
+    name     => "person",
+    self     => "PhoneNumber",
+    type     => "belongs_to",
+  },
+]
+
+
+##### schema #####
+"ExampleDB"
+
+
+##### schema_class #####
+"ExampleDB"
+
+
+##### schema_version #####
+1
+
+
+##### software_versions #####
+{
+  "DBICx::AutoDoc" => "0.03",
+  "DBICx::AutoDoc::Magic" => "0.01",
+  "DBIx::Class" => "0.08008",
+  Template => "2.19",
+}
+
+
+##### sources #####
+[
+  {
+    class => "ExampleDB::Result::Address",
+    columns => [
+          {
+            data_type => "integer",
+            is_auto_increment => 1,
+            is_inflated => 0,
+            is_nullable => 0,
+            is_primary => 1,
+            name => "id",
+            unique_constraints => ["primary"],
+          },
+          {
+            data_type => "integer",
+            is_foreign_key => 1,
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "person_id",
+          },
+          {
+            comment => "Home, work, etc",
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "name",
+            size => 64,
+          },
+          {
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "address1",
+            size => 128,
+          },
+          {
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 1,
+            name => "address2",
+            size => 128,
+          },
+          {
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "city",
+            size => 64,
+          },
+          {
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "state",
+            size => 2,
+          },
+          {
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "zip_code",
+            size => 10,
+          },
+        ],
+    moniker => "Address",
+    primary_columns => ["id"],
+    relationships => [
+          {
+            attr => {},
+            attributes => undef,
+            attrs => { accessor => "single" },
+            class => "ExampleDB::Result::Person",
+            cond => { "foreign.id" => "self.person_id" },
+            condition => "person_id",
+            foreign_class => "ExampleDB::Result::Person",
+            foreign_moniker => "Person",
+            moniker => "Person",
+            name => "person",
+            source => "ExampleDB::Result::Person",
+            type => "belongs_to",
+          },
+        ],
+    result_class => "ExampleDB::Result::Address",
+    resultset_class => "DBIx::Class::ResultSet",
+    simple_moniker => "Address",
+    table => "addresses",
+    unique_constraints => [{ columns => ["id"], name => "primary" }],
+  },
+  {
+    class => "ExampleDB::Result::EmailAddress",
+    columns => [
+          {
+            data_type => "integer",
+            is_auto_increment => 1,
+            is_inflated => 0,
+            is_nullable => 0,
+            is_primary => 1,
+            name => "id",
+            unique_constraints => ["primary"],
+          },
+          {
+            data_type => "integer",
+            is_foreign_key => 1,
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "person_id",
+          },
+          {
+            comment => "Home, work, etc",
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "name",
+            size => 64,
+          },
+          {
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "email",
+            size => 128,
+          },
+        ],
+    moniker => "EmailAddress",
+    primary_columns => ["id"],
+    relationships => [
+          {
+            attr => {},
+            attributes => undef,
+            attrs => { accessor => "single" },
+            class => "ExampleDB::Result::Person",
+            cond => { "foreign.id" => "self.person_id" },
+            condition => "person_id",
+            foreign_class => "ExampleDB::Result::Person",
+            foreign_moniker => "Person",
+            moniker => "Person",
+            name => "person",
+            source => "ExampleDB::Result::Person",
+            type => "belongs_to",
+          },
+        ],
+    result_class => "ExampleDB::Result::EmailAddress",
+    resultset_class => "DBIx::Class::ResultSet",
+    simple_moniker => "EmailAddress",
+    table => "email_addresses",
+    unique_constraints => [{ columns => ["id"], name => "primary" }],
+  },
+  {
+    class => "ExampleDB::Result::Person",
+    columns => [
+          {
+            data_type => "integer",
+            is_auto_increment => 1,
+            is_inflated => 0,
+            is_nullable => 0,
+            is_primary => 1,
+            name => "id",
+            unique_constraints => ["primary"],
+          },
+          {
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "name",
+            size => 64,
+          },
+          {
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 1,
+            name => "username",
+            size => 16,
+            unique_constraints => ["people_username"],
+          },
+          { data_type => "date", is_inflated => 1, name => "birthdate" },
+        ],
+    moniker => "Person",
+    primary_columns => ["id"],
+    relationships => [
+          {
+            attr => {},
+            attributes => undef,
+            attrs => {
+                  accessor       => "multi",
+                  cascade_copy   => 1,
+                  cascade_delete => 1,
+                  join_type      => "LEFT",
+                },
+            class => "ExampleDB::Result::Address",
+            cond => { "foreign.person_id" => "self.id" },
+            condition => "person_id",
+            foreign_class => "ExampleDB::Result::Address",
+            foreign_moniker => "Address",
+            moniker => "Address",
+            name => "addresses",
+            source => "ExampleDB::Result::Address",
+            type => "has_many",
+          },
+          {
+            attr => {},
+            attributes => undef,
+            attrs => {
+                  accessor       => "multi",
+                  cascade_copy   => 1,
+                  cascade_delete => 1,
+                  join_type      => "LEFT",
+                },
+            class => "ExampleDB::Result::EmailAddress",
+            cond => { "foreign.person_id" => "self.id" },
+            condition => "person_id",
+            foreign_class => "ExampleDB::Result::EmailAddress",
+            foreign_moniker => "EmailAddress",
+            moniker => "EmailAddress",
+            name => "emails",
+            source => "ExampleDB::Result::EmailAddress",
+            type => "has_many",
+          },
+          {
+            attr => {},
+            attributes => undef,
+            attrs => {
+                  accessor       => "multi",
+                  cascade_copy   => 1,
+                  cascade_delete => 1,
+                  join_type      => "LEFT",
+                },
+            class => "ExampleDB::Result::PhoneNumber",
+            cond => { "foreign.person_id" => "self.id" },
+            condition => "person_id",
+            foreign_class => "ExampleDB::Result::PhoneNumber",
+            foreign_moniker => "PhoneNumber",
+            moniker => "PhoneNumber",
+            name => "phone_numbers",
+            source => "ExampleDB::Result::PhoneNumber",
+            type => "has_many",
+          },
+        ],
+    result_class => "ExampleDB::Result::Person",
+    resultset_class => "DBIx::Class::ResultSet",
+    simple_moniker => "Person",
+    table => "people",
+    unique_constraints => [
+          { columns => ["id"], name => "primary" },
+          { columns => ["username"], name => "people_username" },
+        ],
+  },
+  {
+    class => "ExampleDB::Result::PhoneNumber",
+    columns => [
+          {
+            data_type => "integer",
+            is_auto_increment => 1,
+            is_inflated => 0,
+            is_nullable => 0,
+            is_primary => 1,
+            name => "id",
+            unique_constraints => ["primary"],
+          },
+          {
+            data_type => "integer",
+            is_foreign_key => 1,
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "person_id",
+          },
+          {
+            comment => "Home, work, etc",
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "name",
+            size => 64,
+          },
+          {
+            data_type => "varchar",
+            is_inflated => 0,
+            is_nullable => 0,
+            name => "phone_number",
+            size => 32,
+          },
+        ],
+    moniker => "PhoneNumber",
+    primary_columns => ["id"],
+    relationships => [
+          {
+            attr => {},
+            attributes => undef,
+            attrs => { accessor => "single" },
+            class => "ExampleDB::Result::Person",
+            cond => { "foreign.id" => "self.person_id" },
+            condition => "person_id",
+            foreign_class => "ExampleDB::Result::Person",
+            foreign_moniker => "Person",
+            moniker => "Person",
+            name => "person",
+            source => "ExampleDB::Result::Person",
+            type => "belongs_to",
+          },
+        ],
+    result_class => "ExampleDB::Result::PhoneNumber",
+    resultset_class => "DBIx::Class::ResultSet",
+    simple_moniker => "PhoneNumber",
+    table => "phone_numbers",
+    unique_constraints => [{ columns => ["id"], name => "primary" }],
+  },
+]
+
+
+##### user #####
+""
+
+
+
