@@ -3,7 +3,6 @@ package # hide from PAUSE
 use strict;
 use warnings;
 our $VERSION = 1;
-our $ID = '$Id: Person.pm 22 2007-11-21 15:17:51Z jason $';
 use base qw( DBIx::Class );
 
 __PACKAGE__->load_components(qw( InflateColumn::DateTime Core ));
