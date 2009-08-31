@@ -1,7 +1,7 @@
 [% IF comment %]
     <tr class="[% class %]">
     <td>&nbsp;</td>
-    <td[% IF colspan %]colspan="[% colspan %]"[% END %]>
+    <td[% IF colspan %] colspan="[% colspan %]"[% END %]>
         <div class="comment">[% comment %]</div>
     </td>
     </tr>
