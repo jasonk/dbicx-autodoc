@@ -1,7 +1,7 @@
 package DBICx::AutoDoc;
 use strict;
 use warnings;
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 use base qw( Class::Accessor::Grouped );
 use Carp qw( croak );
 use Template;

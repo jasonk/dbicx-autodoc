@@ -1,7 +1,12 @@
 Revision history for Perl extension DBICx::AutoDoc.
 
+0.07
+    - Added another patch from Dagfinn Ilmari Mannsåkerin to correctly
+      show multidimentional column sizes.  I should have looked all the
+      way through the queue before releasing...  RT#44843
+
 0.06
-    - Added a patch from Dagfinn Ilmari Mannsåkerinto show ENUM values.
+    - Added a patch from Dagfinn Ilmari Mannsåkerin to show ENUM values.
       RT#44847
 
 0.05
