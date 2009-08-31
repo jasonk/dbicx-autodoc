@@ -1,5 +1,9 @@
 Revision history for Perl extension DBICx::AutoDoc.
 
+0.06
+    - Added a patch from Dagfinn Ilmari Mannsåkerinto show ENUM values.
+      RT#44847
+
 0.05
     - Fixed a bug where comments on columns were not rendered correctly.
       Reported, and patch supplied, by Dagfinn Ilmari Mannsåkerin RT#44844
