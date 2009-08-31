@@ -1,5 +1,9 @@
 Revision history for Perl extension DBICx::AutoDoc.
 
+0.05
+    - Fixed a bug where comments on columns were not rendered correctly.
+      Reported, and patch supplied, by Dagfinn Ilmari Mannsåkerin RT#44844
+
 0.04
     - Added Tie::IxHash to the list of requirements.  Reported by
       Anders Nor Berle.

@@ -7,4 +7,3 @@
     </tr>
     [% INCLUDE table_comment.tt2 colspan = 2 comment = col.comment %]
 [% END -%]
-[%# $Id$ #%]

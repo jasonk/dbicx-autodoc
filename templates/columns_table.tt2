@@ -9,5 +9,3 @@
         [% INCLUDE columns_row.tt2 %]
     [% END %]
 </table>
-
-[%# $Id$ #%]

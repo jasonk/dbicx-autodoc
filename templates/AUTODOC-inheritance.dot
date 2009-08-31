@@ -14,4 +14,3 @@ digraph inheritance {
         [% END %]
     [%- END %]
 }
-[%# $Id$ #%]

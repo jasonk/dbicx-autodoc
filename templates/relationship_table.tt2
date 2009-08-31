@@ -49,4 +49,3 @@
     </table>
 [% END %]
 <br clear="both" />
-[%# $Id$ #%]

@@ -6,4 +6,3 @@
     [% IF col.is_inflated %]INFLATED,[% END %]
     [% IF col.is_foreign_key %]FOREIGN KEY,[% END %]
 [% END %][% END -%]
-[%# $Id$ #%]

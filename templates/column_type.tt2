@@ -3,4 +3,3 @@
     [%- IF col.exists( 'size' ) AND col.size %]([% col.size %])[% END %]
     [%# col.exists is to keep .size from being interpreted as a vmethod #%]
 [% END -%]
-[%# $Id$ #%]
