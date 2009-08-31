@@ -3,7 +3,7 @@ use inc::Module::Install;
 name 'DBICx-AutoDoc';
 all_from 'lib/DBICx/AutoDoc.pm';
 
-require( $_ ) for qw(
+requires( $_ ) for qw(
     DBIx::Class Template Class::Inspector Carp Class::Accessor::Grouped FindBin
     Data::Dump File::Temp Pod::Usage Getopt::Long Tie::IxHash
 );
