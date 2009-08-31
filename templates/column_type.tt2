@@ -1,5 +1,9 @@
 [%- FILTER collapse %]
     [% col.data_type -%]
+    [%- IF col.data_type == 'enum' AND col.extra.list.size -%]
+        ('[% col.extra.list.join("', '") %]')
+    [%- END %]
     [%- IF col.exists( 'size' ) AND col.size %]([% col.size %])[% END %]
     [%# col.exists is to keep .size from being interpreted as a vmethod #%]
+
 [% END -%]
