@@ -1,7 +1,7 @@
 package DBICx::AutoDoc::Magic;
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.05';
 use DBIx::Class::Relationship::Helpers;
 use base qw( DBIx::Class );
 
