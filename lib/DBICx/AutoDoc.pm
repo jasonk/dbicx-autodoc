@@ -5,11 +5,12 @@ our $VERSION = '0.07';
 use base qw( Class::Accessor::Grouped );
 use Carp qw( croak );
 use Template;
-use Class::Inspector;
 use FindBin qw( );
 use Data::Dump qw( dump );
 use DBICx::AutoDoc::Magic;
 use File::Temp qw( tempfile );
+use File::ShareDir qw( dist_dir );
+use File::Spec;
 use Tie::IxHash;
 
 __PACKAGE__->mk_group_accessors( simple => qw(
@@ -385,13 +386,8 @@ sub output_filename {
 
 sub default_include_path {
     my ( $self ) = @_;
-    my $class = ref( $self ) || $self;
-    my $short = Class::Inspector->filename( $class );
-    my $long = Class::Inspector->loaded_filename( $class );
-    substr( $short, -3, 3, '' );
-    $long =~ m{^(.*)\Q$short\E\.pm\z}s or die "Failed to find base dir";
-    my $dir = File::Spec->catdir( $1, 'auto', $short );
-    return [ $dir, File::Spec->catdir( $FindBin::Bin, "templates" ) ];
+    (my $dist = ref( $self ) || $self) =~ s/::/-/g;
+    return [ dist_dir( $dist ), File::Spec->catdir( $FindBin::Bin, "templates" ) ];
 }
 
 sub list_templates {
