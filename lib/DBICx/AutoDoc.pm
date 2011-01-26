@@ -147,6 +147,11 @@ sub get_columns_for {
     # COLUMNS
     for ( $class->columns ) {
         my $col = $class->column_info( $_ );
+        $col->{ 'default_value' } =
+            ref($col->{ 'default_value' }) eq "SCALAR" ? ${$col->{ 'default_value' }}
+          : defined($col->{ 'default_value' })         ? "'$col->{ 'default_value' }'"
+          :                                              'NULL'
+              if exists $col->{ 'default_value' };
         $col->{ 'name' } = $_;
         $col->{ 'is_inflated' } = delete $col->{ '_inflate_info' } ? 1 : 0;
         $cols{ $_ } = $col;

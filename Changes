@@ -1,5 +1,7 @@
 Revision history for Perl extension DBICx::AutoDoc.
 
+    - Handle literal SQL and explicit undef default values RT#65155
+
 0.07
     - Added another patch from Dagfinn Ilmari Mannsåkerin to correctly
       show multidimentional column sizes.  I should have looked all the

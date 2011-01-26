@@ -23,6 +23,7 @@ __PACKAGE__->add_columns(
         data_type           => 'varchar',
         size                => 64,
         is_nullable         => 0,
+        default_value       => 'Home',
         comment             => 'Home, work, etc',
     },
     phone_number    => {
