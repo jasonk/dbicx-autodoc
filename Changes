@@ -1,5 +1,6 @@
 Revision history for Perl extension DBICx::AutoDoc.
 
+0.08
     - Handle literal SQL and explicit undef default values RT#65155
     - Use File::ShareDir to get default template path RT#64697
 
