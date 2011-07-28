@@ -8,7 +8,7 @@ requires( $_ ) for qw(
     Data::Dump File::Temp Pod::Usage Getopt::Long Tie::IxHash
 );
 
-requires( File::ShareDir => '1.00' );
+requires( 'File::ShareDir' => '1.00' );
 
 test_requires( $_ ) for qw(
     Test::More
