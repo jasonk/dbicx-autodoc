@@ -27,6 +27,9 @@
 \bBuild\.bat$
 \b_build
 
+# Avoid common generated files
+^MYMETA\.
+
 # Avoid temp and backup files.
 ~$
 \.old$

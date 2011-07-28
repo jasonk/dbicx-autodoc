@@ -12,4 +12,4 @@ Makefile.old
 *.bak
 *~
 .DS_Store
-
+MYMETA.*
