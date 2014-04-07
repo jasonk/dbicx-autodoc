@@ -1,15 +1,16 @@
 package DBICx::AutoDoc;
 use strict;
 use warnings;
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 use base qw( Class::Accessor::Grouped );
 use Carp qw( croak );
 use Template;
-use Class::Inspector;
 use FindBin qw( );
 use Data::Dump qw( dump );
 use DBICx::AutoDoc::Magic;
 use File::Temp qw( tempfile );
+use File::ShareDir qw( dist_dir );
+use File::Spec;
 use Tie::IxHash;
 
 __PACKAGE__->mk_group_accessors( simple => qw(
@@ -147,6 +148,11 @@ sub get_columns_for {
     # COLUMNS
     for ( $class->columns ) {
         my $col = $class->column_info( $_ );
+        $col->{ 'default_value' } =
+            ref($col->{ 'default_value' }) eq "SCALAR" ? ${$col->{ 'default_value' }}
+          : defined($col->{ 'default_value' })         ? "'$col->{ 'default_value' }'"
+          :                                              'NULL'
+              if exists $col->{ 'default_value' };
         $col->{ 'name' } = $_;
         $col->{ 'is_inflated' } = delete $col->{ '_inflate_info' } ? 1 : 0;
         $cols{ $_ } = $col;
@@ -202,7 +208,7 @@ sub get_relationships_for {
         if ( $type eq 'many_to_many' ) {
             @{ $rel }{qw( link_rel_name foreign_rel_name attributes )} = @parts;
         } else {
-            @{ $rel }{qw( foreign_class condition attributes )} = @parts;
+            @{ $rel }{qw( foreign_class cond attributes )} = @parts;
         }
     }
 
@@ -224,6 +230,10 @@ sub get_relationships_for {
                 $rel->{ $x.'moniker' } = $rel->{ $x.'class' }->source_name;
             }
         }
+        # Can't handle the comples conds returned by code refs yet
+        # $rel->{ 'cond' } = ($rel->{ 'cond' }->({ self_alias => 'self', foreign_alias => 'foreign' }))[0]
+        delete( $rel->{ 'cond' } )
+            if ref( $rel->{ 'cond' } ) eq 'CODE';
     }
 
     return values %relationships;
@@ -253,7 +263,7 @@ sub relationship_map {
                 $map->{ 'self' } = $source->{ 'moniker' };
                 $map->{ 'foreign' } = $snames->{ $rel->{ 'foreign_class' } };
 
-                my %cond = %{ $rel->{ 'cond' } };
+                my %cond = %{ $rel->{ 'cond' } || {} };
             
                 my @cond = ();
                 while ( my ( $l, $r ) = each %cond ) {
@@ -380,13 +390,8 @@ sub output_filename {
 
 sub default_include_path {
     my ( $self ) = @_;
-    my $class = ref( $self ) || $self;
-    my $short = Class::Inspector->filename( $class );
-    my $long = Class::Inspector->loaded_filename( $class );
-    substr( $short, -3, 3, '' );
-    $long =~ m{^(.*)\Q$short\E\.pm\z}s or die "Failed to find base dir";
-    my $dir = File::Spec->catdir( $1, 'auto', $short );
-    return [ $dir, File::Spec->catdir( $FindBin::Bin, "templates" ) ];
+    (my $dist = ref( $self ) || $self) =~ s/::/-/g;
+    return [ dist_dir( $dist ), File::Spec->catdir( $FindBin::Bin, "templates" ) ];
 }
 
 sub list_templates {

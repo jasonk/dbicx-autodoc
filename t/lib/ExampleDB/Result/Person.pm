@@ -23,9 +23,14 @@ __PACKAGE__->add_columns(
         data_type           => 'varchar',
         size                => 16,
         is_nullable         => 1,
+        default_value       => undef,
     },
     birthdate   => {
         data_type           => 'date',
+    },
+    registered => {
+        data_type           => 'datetime',
+        default_value       => \'CURRENT_TIMESTAMP',
     },
 );
 __PACKAGE__->set_primary_key( 'id' );
